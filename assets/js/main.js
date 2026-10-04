@@ -19,7 +19,7 @@ menuBtn.addEventListener("click",()=>setMenu(menuBtn.getAttribute("aria-expanded
 $$(".mobile-menu a").forEach(a=>a.addEventListener("click",()=>setMenu(false)));
 
 const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.12});
-$$(".reveal").forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%3,2)*45}ms`;io.observe(el)});
+$$(".reveal").forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%3,2)*25}ms`;io.observe(el)});
 
 const counter=$(".count");
 if(counter){
